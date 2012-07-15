@@ -4,7 +4,13 @@ algoruby
 Algorithms in a Nutshell, Ruby Implementations
 # Algoruby
 
-TODO: Write a gem description
+Translating algorithms from:
+
+"Algorithms in a Nutshell: A Desktop Reference"
+George T. Heineman Gary Police & Stanley Selkow
+O'reilly
+
+into Ruby.  Just for fun and educational purposes.
 
 ## Installation
 
