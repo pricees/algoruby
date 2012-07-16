@@ -67,9 +67,6 @@ module Algoruby
 
       def self.median_sort(ary, left = 0, right = ary.length - 1)
 
-        left  ||= 0
-        right ||= ary.length - 1
-
         return ary if (right <= left)
 
         mid = (right - left + 1 ) / 2
