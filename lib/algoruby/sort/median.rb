@@ -82,9 +82,7 @@ module Algoruby
       class << self
         alias_method :sort, :median_sort
       end
-
     end
-
   end
 end
 
