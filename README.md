@@ -39,3 +39,5 @@ ary = [1, 2, 3, ..., n]
 Algoruby::Sort::Insertion.sort(ary)
 
 Algoruby::Sort::Median.sort(ary)
+
+Algoruby::Sort::Quicksort.sort(ary)

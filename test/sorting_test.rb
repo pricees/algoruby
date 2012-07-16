@@ -24,6 +24,19 @@ class SortingTest
       refute @ary == res
     end
 
+    describe Algoruby::Sort::Quicksort do
+
+      it "sorts using quicksort algorithm" do
+
+        ary_dup = @ary.dup
+
+        res = Algoruby::Sort::Quicksort.sort ary_dup
+        res.must_equal (0...@max).to_a
+
+        refute @ary == res
+      end
+    end
+
     describe Algoruby::Sort::Median do
 
       it "selects kth element" do
@@ -64,6 +77,7 @@ class SortingTest
       end
 
       it "sorts using BFPRT median method" do
+        skip
 
         ary_dup = @ary.dup
 
