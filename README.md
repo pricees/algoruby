@@ -33,6 +33,7 @@ Or install it yourself as:
   - Insertion Sort
   - Median Sort
   - Blum-Floyd-Pratt-Rivest-Tarjan ver (unfinished)
+  - Quicksort
 
 ary = [1, 2, 3, ..., n]
 
