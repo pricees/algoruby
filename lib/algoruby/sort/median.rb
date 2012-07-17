@@ -9,19 +9,13 @@ module Algoruby
     #
     module Median
 
-      def self.select_pivot_i(ary, left, right)
-        rand(right - left) + left
-      end
-
       #
       #  Select the kth element of an ary where
       #  1 <= k <= (right - left)  + 1
       #
-      #
-      #
       def self.select_kth(ary, k, left, right)
 
-        tmp_i   = select_pivot_i(ary, left, right)
+        tmp_i  = (right - left) / 2 + left
         pivot_i = partition(ary, left, right, tmp_i)
 
         return pivot_i if (left + k - 1) == pivot_i
