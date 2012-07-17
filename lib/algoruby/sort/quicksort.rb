@@ -22,7 +22,7 @@ module Algoruby
 
       def self.partition(ary, left, right)
 
-        pivot_i = rand(right - left) + left
+        pivot_i = (right - left) / 2 + left
 
         ary[pivot_i], ary[right] = ary[right], ary[pivot_i]
         store = left
