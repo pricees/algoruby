@@ -9,6 +9,38 @@ module Algoruby
     #
     module Quicksort
 
+      #
+      #  Quick Sort using Median Sort when needed, Insertion sort when
+      #  optimized
+      #
+      def self.do_qsort(ary, left = 0, right = ary.length - 1, min_size)
+
+        return ary if right <= left
+
+        tmp_pi  = select_pivot_index(ary, left, right)
+        pivot_i = partition(ary, left, right, tmp_pi)
+
+        if (pivot_i - 1 - left) <= min_size
+          insertion(ary, left, pivot_i - 1)
+        else
+          do_qsort(ary, left, pivot_i -1 )
+        end
+
+        if (right - pivot_i - 1) <= min_size
+          insertion(ary, pivot_i + 1, right)
+        else
+          do_qsort(ary, pivot_i + 1, right)
+        end
+      end
+
+      class << self
+        alias_method :sort_pointers, :do_qsort
+      end
+
+      #
+      # Traditional qsort
+      #
+
       def self.sort(ary, left = 0, right = ary.length - 1)
 
         if left < right

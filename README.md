@@ -37,8 +37,14 @@ Or install it yourself as:
 
 ary = [1, 2, 3, ..., n]
 
+Algoruby::Sort::Counting.sort(ary)
+
+Algoruby::Sort::Heap.sort(ary)
+
 Algoruby::Sort::Insertion.sort(ary)
 
 Algoruby::Sort::Median.sort(ary)
 
 Algoruby::Sort::Quicksort.sort(ary)
+
+Algoruby::Sort::Selection.sort(ary)
