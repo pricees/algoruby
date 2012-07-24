@@ -35,7 +35,7 @@ Or install it yourself as:
 
 #### Syntax ####
 
-Algoruby::Sort::Sequential.search(haystack, needle)
+Algoruby::Search::Sequential.search(haystack, needle)
 
 ### Sorts
 
