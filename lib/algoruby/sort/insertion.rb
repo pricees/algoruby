@@ -12,8 +12,9 @@ module Algoruby
     #   - Collection nearly sorted
     #
     module Insertion
+      extend self
 
-      def self.insert ary, pos
+      def insert ary, pos
         value = ary[pos]
         i     = pos - 1
 
@@ -25,7 +26,7 @@ module Algoruby
         ary[i+1] = value
       end
 
-      def self.sort(ary)
+      def sort(ary)
         (1...ary.length).each do |i|
           insert(ary, i)
         end

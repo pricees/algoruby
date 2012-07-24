@@ -8,8 +8,9 @@ module Algoruby
     # Worst:  O(n)  [linear]
     #
     module Counting
+      extend self
 
-      def self.sort(ary)
+      def sort(ary)
         buckets = ary.inject(Array.new) do |tmp, n|
           tmp[n] ||= 0
           tmp[n]  += 1

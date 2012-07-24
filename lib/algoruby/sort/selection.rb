@@ -8,8 +8,9 @@ module Algoruby
     # Worst:  O(n^2)  [quadratic]
     #
     module Selection
+      extend self
 
-      def self.select_max(ary, left = 0, right = ary.length - 1)
+      def select_max(ary, left = 0, right = ary.length - 1)
         max_pos = left
 
         ary[left..right].each_with_index do |num, idx|
@@ -18,7 +19,7 @@ module Algoruby
         max_pos
       end
 
-      def self.sort(ary, n = ary.length - 1)
+      def sort(ary, n = ary.length - 1)
        n.downto(1).each do |idx|
           max_pos = select_max(ary, 0, idx)
           unless max_pos == idx

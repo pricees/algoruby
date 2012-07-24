@@ -8,8 +8,9 @@ module Algoruby
     # Worst:  O(n)  [linear]
     #
     module Bucket
+      extend self
 
-      def self.sort(ary)
+      def sort(ary)
         buckets = ary.inject(Array.new(0)) do |tmp, n|
           k = n / 3
           (tmp[k] ||= []) << n
@@ -19,7 +20,7 @@ module Algoruby
         extract(buckets, ary)
       end
 
-      def self.extract(buckets, ary)
+      def extract(buckets, ary)
         idx = 0
 
         buckets.each do |b_ary|

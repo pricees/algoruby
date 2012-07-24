@@ -8,12 +8,13 @@ module Algoruby
     # Worst:  O(n^2)      [quadratic]
     #
     module Median
+      extend self
 
       #
       #  Select the kth element of an ary where
       #  1 <= k <= (right - left)  + 1
       #
-      def self.select_kth(ary, k, left, right)
+      def select_kth(ary, k, left, right)
 
         tmp_i  = (right - left) / 2 + left
         pivot_i = partition(ary, left, right, tmp_i)
@@ -35,7 +36,7 @@ module Algoruby
       #  Everything to the left is less-than-or-equal
       #  Everything to the right is greater-than
       #
-      def self.partition(ary, left, right, pivot_i)
+      def partition(ary, left, right, pivot_i)
 
         left  = 0
         right = ary.length - 1
@@ -59,7 +60,7 @@ module Algoruby
         store
       end
 
-      def self.median_sort(ary, left = 0, right = ary.length - 1)
+      def median_sort(ary, left = 0, right = ary.length - 1)
 
         return ary if (right <= left)
 

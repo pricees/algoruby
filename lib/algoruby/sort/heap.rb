@@ -8,8 +8,9 @@ module Algoruby
     # Worst:  O(n log n)  [n logarithmic]
     #
     module Heap
+      extend self
 
-      def self.sort(ary, n = ary.length - 1)
+      def sort(ary, n = ary.length - 1)
         build_heap(ary)
 
         n.downto(1).each do |i|
@@ -20,7 +21,7 @@ module Algoruby
         ary
       end
 
-      def self.build_heap(ary, n = ary.length)
+      def build_heap(ary, n = ary.length)
         (n / 2 - 1).downto(0).each do |i|
           heapify(ary, i, n)
         end
@@ -28,7 +29,7 @@ module Algoruby
         ary
       end
 
-      def self.heapify(ary, i, max = ary.length - 1)
+      def heapify(ary, i, max = ary.length - 1)
         left  = 2 * i + 1
         right = left + 1   # XXX: 2 * i + 2
 

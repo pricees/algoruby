@@ -11,6 +11,7 @@ module Algoruby
     # Worst:  O(n log n)
     #
     module BFPRT
+      extend self
 
       #
       #  Determine the median of 4 elements in ary:
@@ -21,7 +22,7 @@ module Algoruby
       #
       # Verify: ar[left + gap * 2] contains median value
       #
-      def self.median_of_four(ary, left, gap)
+      def median_of_four(ary, left, gap)
         i1 = left + gap
         i2 = i1 + gap
         i3 = i2 + gap
@@ -93,7 +94,7 @@ module Algoruby
       #
       #  Insert with regard to gap
       #
-      def self.insert(ary, low, right, gap)
+      def insert(ary, low, right, gap)
         loc = low + gap
 
         while loc <= right
@@ -110,7 +111,7 @@ module Algoruby
         end
       end
 
-      def self.median_of_medians(ary, left, right, gap)
+      def median_of_medians(ary, left, right, gap)
 
         span = 4 * gap
         num  = (right - left + 1) / span
@@ -135,7 +136,7 @@ module Algoruby
         end
       end
 
-      def self.select_median(ary, left, right)
+      def select_median(ary, left, right)
         k = (right - left + 1) / 2
 
         while k > 0

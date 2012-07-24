@@ -8,12 +8,13 @@ module Algoruby
     # Worst:  O(n^2)      [quadratic]
     #
     module Quicksort
+      extend self
 
       #
       #  Quick Sort using Median Sort when needed, Insertion sort when
       #  optimized
       #
-      def self.do_qsort(ary, left = 0, right = ary.length - 1, min_size)
+      def do_qsort(ary, left = 0, right = ary.length - 1, min_size)
 
         return ary if right <= left
 
@@ -41,7 +42,7 @@ module Algoruby
       # Traditional qsort
       #
 
-      def self.sort(ary, left = 0, right = ary.length - 1)
+      def sort(ary, left = 0, right = ary.length - 1)
 
         if left < right
           pi = partition(ary, left, right)
@@ -52,7 +53,7 @@ module Algoruby
         ary
       end
 
-      def self.partition(ary, left, right)
+      def partition(ary, left, right)
 
         pivot_i = (right - left) / 2 + left
 
