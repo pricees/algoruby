@@ -28,7 +28,18 @@ Or install it yourself as:
 
 ## Usage
 
-== Sorts ==
+#### Sort Medley ####
+
+  - Blum-Floyd-Pratt-Rivest-Tarjan ver (unfinished)
+  - Bucket
+  - Counting Sort
+  - Heap Sort
+  - Insertion Sort
+  - Median Sort
+  - Quicksort
+  - Selection
+
+#### How to choose? ####
 
 <table>
 <thead><td>Criteria</td><td>Algorithm</td></thead>
@@ -42,17 +53,9 @@ Or install it yourself as:
 </tbody>
 </table>
 
+#### Syntax ####
 
-  - Blum-Floyd-Pratt-Rivest-Tarjan ver (unfinished)
-  - Bucket
-  - Counting Sort
-  - Heap Sort
-  - Insertion Sort
-  - Median Sort
-  - Quicksort
-  - Selection
-
-ary = [1, 2, 3, ..., n]
+ary = [1, 2, 3, ..., _x_ ]
 
 Algoruby::Sort::Bucket.sort(ary)
 
