@@ -28,6 +28,17 @@ Or install it yourself as:
 
 ## Usage
 
+### Searches
+
+#### Search Medley ####
+  - Sequential
+
+#### Syntax ####
+
+Algoruby::Sort::Sequential.search(haystack, needle)
+
+### Sorts
+
 #### Sort Medley ####
 
   - Blum-Floyd-Pratt-Rivest-Tarjan ver (unfinished)

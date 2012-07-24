@@ -1,0 +1,1 @@
+require 'algoruby/search/sequential'
