@@ -5,7 +5,7 @@ class SortingTest
   describe Algoruby::Sort do
 
     before do
-      @max = 100
+      @max = 99
 
       @ary = begin
         s = Set.new
@@ -150,18 +150,6 @@ class SortingTest
         ary = [ 5, 3, 16, 2, 10, 14 ]
         exp = [ 16, 10, 14, 2, 3, 5 ]
         Algoruby::Sort::Heap.build_heap(ary).must_equal exp
-      end
-
-      it "builds a heap" do
-        ary = (1..10).to_a
-
-        (0...5).each do |i|
-          Algoruby::Sort::Heap.
-            expects(:heapify).
-            with(ary, i, 10)
-        end
-
-        Algoruby::Sort::Heap.build_heap(ary)
       end
 
       it "sorts using heap sort algorithm" do
