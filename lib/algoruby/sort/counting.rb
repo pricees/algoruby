@@ -1,6 +1,3 @@
-#
-# NOTE: This is unfinished
-#
 module Algoruby
   module Sort
     #

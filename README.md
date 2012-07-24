@@ -32,10 +32,10 @@ Or install it yourself as:
 
   - Blum-Floyd-Pratt-Rivest-Tarjan ver (unfinished)
   - Bucket
-  - Counting Sort
-  - Heap Sort
-  - Insertion Sort
-  - Median Sort
+  - Counting
+  - Heap
+  - Insertion
+  - Median
   - Quicksort
   - Selection
 
