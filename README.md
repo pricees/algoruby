@@ -30,10 +30,13 @@ Or install it yourself as:
 
 == Sorts ==
 
+  - Blum-Floyd-Pratt-Rivest-Tarjan ver (unfinished)
+  - Counting Sort
+  - Heap Sort
   - Insertion Sort
   - Median Sort
-  - Blum-Floyd-Pratt-Rivest-Tarjan ver (unfinished)
   - Quicksort
+  - Selection
 
 ary = [1, 2, 3, ..., n]
 
