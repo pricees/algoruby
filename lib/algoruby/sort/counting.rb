@@ -15,6 +15,7 @@ module Algoruby
           tmp[n]  += 1
           tmp
         end
+
         idx = 0
 
         buckets.each_with_index do |n, i|
