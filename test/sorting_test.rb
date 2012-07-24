@@ -37,35 +37,6 @@ class SortingTest
       end
     end
 
-    describe Algoruby::Sort::Heap do
-
-      it "heapifies" do
-        ary = [ 5, 3, 16, 2, 10, 14 ]
-        exp = [ 16, 10, 14, 2, 3, 5 ]
-        Algoruby::Sort::Heap.build_heap(ary).must_equal exp
-      end
-
-      it "builds a heap" do
-        ary = (1..10).to_a
-
-        (0...5).each do |i|
-          Algoruby::Sort::Heap.
-            expects(:heapify).
-            with(ary, i, 10)
-        end
-
-        Algoruby::Sort::Heap.build_heap(ary)
-      end
-
-      it "sorts using heap sort algorithm" do
-
-        res = Algoruby::Sort::Heap.sort @ary.dup
-        res.must_equal (0...@max).to_a
-
-        refute @ary == res
-      end
-    end
-
     describe Algoruby::Sort::Selection do
 
       it "selects the max" do
@@ -153,6 +124,49 @@ class SortingTest
         res.must_equal [ 0, 0, 0, 2, 2, 2, 3 ]
 
         res = Algoruby::Sort::Counting.sort @ary.dup
+        res.must_equal (0...@max).to_a
+
+        refute @ary == res
+      end
+    end
+    describe Algoruby::Sort::Bucket do
+
+      it "sorts using bucket sort algorithm" do
+
+        ary = [3,0,2,0,0,2,2]
+        res = Algoruby::Sort::Bucket.sort ary
+        res.must_equal [ 0, 0, 0, 2, 2, 2, 3 ]
+
+        res = Algoruby::Sort::Bucket.sort @ary.dup
+        res.must_equal (0...@max).to_a
+
+        refute @ary == res
+      end
+    end
+
+    describe Algoruby::Sort::Heap do
+
+      it "heapifies" do
+        ary = [ 5, 3, 16, 2, 10, 14 ]
+        exp = [ 16, 10, 14, 2, 3, 5 ]
+        Algoruby::Sort::Heap.build_heap(ary).must_equal exp
+      end
+
+      it "builds a heap" do
+        ary = (1..10).to_a
+
+        (0...5).each do |i|
+          Algoruby::Sort::Heap.
+            expects(:heapify).
+            with(ary, i, 10)
+        end
+
+        Algoruby::Sort::Heap.build_heap(ary)
+      end
+
+      it "sorts using heap sort algorithm" do
+
+        res = Algoruby::Sort::Heap.sort @ary.dup
         res.must_equal (0...@max).to_a
 
         refute @ary == res

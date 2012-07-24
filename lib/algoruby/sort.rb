@@ -1,5 +1,5 @@
 require 'algoruby/sort/b_f_p_r_t'
-#require 'algoruby/sort/bucket'
+require 'algoruby/sort/bucket'
 require 'algoruby/sort/counting'
 require 'algoruby/sort/heap'
 require 'algoruby/sort/insertion'

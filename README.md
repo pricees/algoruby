@@ -30,7 +30,21 @@ Or install it yourself as:
 
 == Sorts ==
 
+<table>
+<thead><td>Criteria</td><td>Algorithm</td></thead>
+<tbody>
+<tr><td>Only a few items</td><td>Insertion</td></tr>
+<tr><td>Items are mostly sorted already</td><td>Insertion</td></tr>
+<tr><td>Concerned about worst-case scenarios</td><td>Heap</td></tr>
+<tr><td>Interested in a good average-case result</td><td>Quicksort</td></tr>
+<tr><td>Items are drawn from a dense universe</td><td>Bucket</td></tr>
+<tr><td>Desire to write as little code as possible</td><td>Insertion</td></tr>
+</tbody>
+</table>
+
+
   - Blum-Floyd-Pratt-Rivest-Tarjan ver (unfinished)
+  - Bucket
   - Counting Sort
   - Heap Sort
   - Insertion Sort
@@ -39,6 +53,8 @@ Or install it yourself as:
   - Selection
 
 ary = [1, 2, 3, ..., n]
+
+Algoruby::Sort::Bucket.sort(ary)
 
 Algoruby::Sort::Counting.sort(ary)
 
