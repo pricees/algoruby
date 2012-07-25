@@ -10,11 +10,12 @@ module Algoruby
     module Sequential
       extend self
 
-      def search(haystack = self, needle)
-        haystack.each { |el| needle == el && (return true) }
-
+      def search(ary, t)
+        ary.each { |el| t == el && (return true) }
         false
       end
+
+      alias_method :include?, :search
     end
   end
 end

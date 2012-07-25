@@ -31,9 +31,15 @@ Or install it yourself as:
 ### Searches
 
 #### Search Medley ####
+  - Binary
+  - Hash
   - Sequential
 
 #### Syntax ####
+
+Algoruby::Search::Binary.search(haystack, needle)
+
+Algoruby::Search::Hash.search(haystack, needle)
 
 Algoruby::Search::Sequential.search(haystack, needle)
 
