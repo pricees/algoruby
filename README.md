@@ -32,12 +32,15 @@ Or install it yourself as:
 
 #### Search Medley ####
   - Binary
+  - Binary Tree (Red-Black, see test)
   - Hash
   - Sequential
 
 #### Syntax ####
 
 Algoruby::Search::Binary.search(haystack, needle)
+
+Algoruby::Search::BinaryTree.search(tree, needle)
 
 Algoruby::Search::Hash.search(haystack, needle)
 
